@@ -9,11 +9,7 @@ function getTrackedEvents() {
   var lastDay = sheet.getRange(2,2).getValue();
 
   //Get the email alias if defined
-  var emailAlias = sheet.getRange(4,2).getValue();
-
-  if (!emailAlias) {
-    emailAlias = "nabeel.saad+";
-  }
+  var emailAlias = sheet.getRange(4,2).getValue() + "+";
 
   var events = CalendarApp.getDefaultCalendar().getEvents(firstDay, lastDay, );
   var eventsTrackedCount = 0;
